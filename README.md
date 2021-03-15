@@ -1,3 +1,3 @@
 # my_PC_Cafe
-#### use JFrame  project
+#### Use JFrame(UI) , MySQL(DB)  project
 #### from opentutorials PC bang project
