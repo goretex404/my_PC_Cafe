@@ -11,6 +11,10 @@ import javax.swing.JTextField;
 
 public class ClientChatGui extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextArea jta = new JTextArea(40, 25);
 	private JTextField jtf = new JTextField(25);
 	private ClientBackground client = new ClientBackground();

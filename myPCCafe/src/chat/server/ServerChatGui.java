@@ -10,6 +10,10 @@ import javax.swing.JTextField;
 
 public class ServerChatGui extends JFrame implements ActionListener {
 
+	/**
+	 * 
+	 */
+	private static final long serialVersionUID = 1L;
 	private JTextArea jta = new JTextArea(40, 25);
 	private JTextField jtf = new JTextField(25);
 	// 연동 ↕
@@ -37,7 +41,7 @@ public class ServerChatGui extends JFrame implements ActionListener {
 	@Override
 	public void actionPerformed(ActionEvent e) {
 		String msg = "카운터 : " + jtf.getText() + "\n";
-//		jta.append("카운터 : " +msg);
+		jta.append(msg);
 		System.out.println(msg);
 		server.sendMessage(msg);
 		jtf.setText("");

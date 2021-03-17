@@ -56,8 +56,8 @@ public class ServerBackground {
 		serverBackground.setting();
 	}
 
-	public void addClient(String nick, DataOutputStream out) {
-		sendMessage(nick + "님이 접속하셨습니다.");
+	public void addClient(String nick, DataOutputStream out) throws IOException {
+		sendMessage(nick + "님이 접속하셨습니다.\n");
 		clientsMap.put(nick, out);
 	}
 
@@ -72,8 +72,8 @@ public class ServerBackground {
 		String key = "";
 
 		while (it.hasNext()) {
+			key = it.next();
 			try {
-				key = it.next();
 				clientsMap.get(key).writeUTF(msg);
 			} catch (IOException e) {
 				e.printStackTrace();
